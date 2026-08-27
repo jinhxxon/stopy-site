@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>제주도 식후경 — 작은편리</title>
+<meta name="description" content="제주도 식후경은 제주도를 찾는 여행객의 한 끼를 더 저렴하고 편하게 해결해주는 작은편리의 서비스입니다." />
+<link rel="icon" type="image/svg+xml" href="/assets/logo-vertical.svg" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="/#top">
+      <img class="logo" src="/assets/logo-horizontal.svg" alt="작은편리 로고" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/#about">소개</a>
+      <a href="/#services">서비스</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="detail-hero">
+    <div class="detail-hero-inner">
+      <a class="detail-back" href="/#services">← 서비스 목록으로</a>
+      <span class="service-tag tag-rose">다음 서비스 준비중</span>
+      <h1>제주도 식후경</h1>
+      <p class="lead">제주도를 찾는 여행객의 한 끼를 더 저렴하고 편하게 해결해주는
+        서비스입니다. 작은편리가 다음 순서로 준비하고 있습니다.</p>
+      <div class="detail-hero-actions">
+        <a class="btn btn-primary" href="/#services">다른 서비스 보기</a>
+        <a class="btn btn-secondary" href="/#about">작은편리 소개</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>어떤 문제를 풀고 있나요</h2>
+      <p class="detail-copy">낯선 여행지에서 다음 끼니를 어디서, 얼마에 해결할지
+        찾느라 아까운 여행 시간을 써본 경험 있으실 거예요. 제주도 식후경은 제주를
+        찾는 여행객이 식사 걱정 없이 여행에만 집중할 수 있도록 돕기 위해
+        준비하고 있는 서비스입니다.</p>
+    </div>
+  </section>
+
+  <section class="detail-section bg-soft">
+    <div class="detail-section-inner">
+      <h2>제주도 식후경이 중요하게 생각하는 것</h2>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="icon">◆</div>
+          <h3>합리적인 가격</h3>
+          <p>여행 중에도 부담 없이 끼니를 해결할 수 있는 가격을 지향합니다.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">◆</div>
+          <h3>여행 동선에 맞는 편리함</h3>
+          <p>이동이 많은 여행객의 동선에 맞춰 식사를 더 편하게 해결하도록 돕습니다.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">◆</div>
+          <h3>제주다운 한 끼</h3>
+          <p>제주 로컬의 맛을 여행객에게 더 쉽게 연결하는 것을 목표로 합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>이런 분들께 추천해요</h2>
+      <ul class="target-list">
+        <li>렌터카 없이, 혹은 이동이 많아 식당을 찾아다니기 번거로운 제주 여행객</li>
+        <li>여행 경비 중 식비를 조금 더 아끼고 싶은 분</li>
+        <li>맛집 검색에 시간 쓰지 않고 여행 자체에 집중하고 싶은 분</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="detail-section bg-soft">
+    <div class="detail-section-inner">
+      <h2>진행 상황</h2>
+      <div class="status-box">
+        <p>제주도 식후경은 현재 기획 단계로, 작은편리의 다음 서비스로 준비하고
+          있습니다.</p>
+        <p>구체적인 출시 일정이 정해지면 이 페이지와 작은편리 홈페이지를 통해
+          가장 먼저 안내해드리겠습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <h2>작은편리의 다른 서비스도 궁금하신가요?</h2>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/#services">서비스 전체 보기</a>
+      <a class="btn btn-secondary" href="/baroyori/">바로요리 보러가기</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <img class="footer-logo" src="/assets/logo-horizontal.svg" alt="작은편리" />
+    <div class="footer-tagline">일상의 짐을 덜어주는 기술</div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> 작은편리. All rights reserved.</span>
+    <span>stopy.io</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>바로요리 — 작은편리</title>
+<meta name="description" content="바로요리는 식재료 낭비를 줄여주는 앱 서비스입니다. 작은편리가 모두의창업 프로그램에 참여하며 만들어가고 있습니다." />
+<link rel="icon" type="image/svg+xml" href="/assets/logo-vertical.svg" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="/#top">
+      <img class="logo" src="/assets/logo-horizontal.svg" alt="작은편리 로고" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/#about">소개</a>
+      <a href="/#services">서비스</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="detail-hero">
+    <div class="detail-hero-inner">
+      <a class="detail-back" href="/#services">← 서비스 목록으로</a>
+      <span class="service-tag tag-green">모두의창업 진행중</span>
+      <h1>바로요리</h1>
+      <p class="lead">식재료 낭비를 줄여주는 앱 서비스입니다. 작은편리가 정부 창업지원
+        프로그램 '모두의창업'에 참여하며 함께 다듬어가고 있습니다.</p>
+      <div class="detail-hero-actions">
+        <a class="btn btn-primary" href="/#services">다른 서비스 보기</a>
+        <a class="btn btn-secondary" href="/#about">작은편리 소개</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>어떤 문제를 풀고 있나요</h2>
+      <p class="detail-copy">장 볼 때는 다 쓸 것 같았던 식재료가, 결국 냉장고 구석에서
+        상해서 버려진 경험 다들 있으실 거예요. 바로요리는 이렇게 매일 반복되는
+        식재료 낭비를 줄이기 위해 시작된 서비스입니다.</p>
+    </div>
+  </section>
+
+  <section class="detail-section bg-soft">
+    <div class="detail-section-inner">
+      <h2>바로요리가 중요하게 생각하는 것</h2>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="icon">◆</div>
+          <h3>낭비 줄이기</h3>
+          <p>사두고 못 먹어서 버려지는 식재료를 줄이는 것을 가장 우선으로 둡니다.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">◆</div>
+          <h3>쉬운 활용</h3>
+          <p>냉장고에 있는 재료를 더 쉽고 편하게 활용할 수 있도록 돕습니다.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">◆</div>
+          <h3>지속 가능한 소비</h3>
+          <p>작은 습관의 변화로 더 지속 가능한 식생활을 만들어갑니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>이런 분들께 추천해요</h2>
+      <ul class="target-list">
+        <li>장을 볼 때마다 식재료를 다 못 쓰고 버리는 일이 잦은 분</li>
+        <li>바쁜 일상 속에서 있는 재료로 무얼 먹을지 매번 고민되는 1인가구·맞벌이 가정</li>
+        <li>식비도 아끼고, 환경에도 조금 더 신경 쓰고 싶은 분</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="detail-section bg-soft">
+    <div class="detail-section-inner">
+      <h2>진행 상황</h2>
+      <div class="status-box">
+        <p>바로요리는 현재 정부 창업지원 프로그램인 '모두의창업'에 참여하며
+          서비스를 다듬어가고 있는 단계입니다.</p>
+        <p>정식 출시 및 서비스 관련 소식은 준비되는 대로 이 페이지와 작은편리
+          홈페이지를 통해 안내해드리겠습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <h2>작은편리의 다른 서비스도 궁금하신가요?</h2>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/#services">서비스 전체 보기</a>
+      <a class="btn btn-secondary" href="/jejusikhugyeong/">제주도 식후경 보러가기</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <img class="footer-logo" src="/assets/logo-horizontal.svg" alt="작은편리" />
+    <div class="footer-tagline">일상의 짐을 덜어주는 기술</div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> 작은편리. All rights reserved.</span>
+    <span>stopy.io</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>
